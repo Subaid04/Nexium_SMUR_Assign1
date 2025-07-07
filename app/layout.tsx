@@ -1,7 +1,7 @@
 // File: app/layout.tsx
 import type { Metadata } from "next";
 import { Orbitron } from "next/font/google";
-import "../styles/globals.css";
+import "./globals.css";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -19,9 +19,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${orbitron.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${orbitron.variable} antialiased`}>{children}</body>
     </html>
   );
 }
